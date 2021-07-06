@@ -1,0 +1,13 @@
+.container {
+    height: 85%;
+    width: 100%;
+}
+
+i{
+    padding-right: .3rem;
+}
+
+a{
+    display: flex;
+    align-items: center;
+}

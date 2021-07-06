@@ -1,0 +1,18 @@
+.header {
+  height: 10%;
+  justify-content: center;
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 3rem;
+}
+
+h1 {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+}
