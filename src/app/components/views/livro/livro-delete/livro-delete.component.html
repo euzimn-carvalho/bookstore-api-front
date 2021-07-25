@@ -1,0 +1,45 @@
+<form>
+    <h1>Criar Novo Livro</h1>
+  
+    <mat-form-field class="form">
+      <mat-label>Título</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="livro.titulo"
+        name="titulo"
+        placeholder="Ex. Harry Potter"
+        maxlength="100"
+        disabled
+      />
+    </mat-form-field>
+    <mat-form-field class="form">
+      <mat-label>Nome Autor</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="livro.nome_autor"
+        name="nome_autor"
+        placeholder="Ex. Thiago Carvalho"
+        maxlength="50"
+        disabled
+      />
+    </mat-form-field>
+    <mat-form-field class="form">
+      <mat-label>Descrição</mat-label>
+      <textarea
+        matInput
+        type="text"
+        name="texto"
+        placeholder="Ex. Descrição do livro"
+        [(ngModel)]="livro.texto"
+        maxlength="10000"
+        disabled
+      ></textarea>
+    </mat-form-field>
+    <div class="buttons">
+      <button mat-stroked-button (click)="delete()" color="primary">Deletar</button>
+      <button mat-stroked-button (click)="cancel()"  color="warn">cancelar</button>
+    </div>
+  </form>
+  

@@ -1,0 +1,51 @@
+<form>
+    <h1>Criar Novo Livro</h1>
+  
+    <mat-form-field class="form">
+      <mat-label>Título</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="livro.titulo"
+        name="titulo"
+        placeholder="Ex. Harry Potter"
+        maxlength="100"
+        required
+        [formControl]="titulo"
+      />
+      <mat-error *ngIf="titulo.invalid">{{ getMessageTitulo() }}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="form">
+      <mat-label>Nome Autor</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="livro.nome_autor"
+        name="nome_autor"
+        placeholder="Ex. Thiago Carvalho"
+        maxlength="50"
+        required
+        [formControl]="nome_autor"
+      />
+      <mat-error *ngIf="nome_autor.invalid" >{{ getMessageNomeAutor() }}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="form">
+      <mat-label>Descrição</mat-label>
+      <textarea
+        matInput
+        type="text"
+        name="texto"
+        placeholder="Ex. Descrição do livro"
+        [(ngModel)]="livro.texto"
+        maxlength="10000"
+        required
+        [formControl]="texto"
+      ></textarea>
+      <mat-error *ngIf="texto.invalid">{{ getMessageTexto() }}</mat-error>
+    </mat-form-field>
+    <div class="buttons">
+      <button mat-stroked-button (click)="create()" color="primary">Criar</button>
+      <button mat-stroked-button (click)="cancel()"  color="warn">cancelar</button>
+    </div>
+  </form>
+  
